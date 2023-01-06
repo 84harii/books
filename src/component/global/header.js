@@ -95,7 +95,7 @@ const Header = ({ headers }) => {
             </button>
             <Link to="/" className="header__logo">
               {/* <h1 className="m-0">BOOKSHELF.</h1> */}
-              <img src={siteLogo} alt="RD" width={84}  />
+              <img src={siteLogo} alt="RD" width={46}  />
             </Link>
             <div className="header__search">
               <form>

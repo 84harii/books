@@ -13,6 +13,7 @@ const appId = process.env.REACT_APP_FIREBASE_APPID;
 const firebaseConfig = {
   apiKey: `${apiKey}`,
   authDomain: `${authDomain}`,
+  databaseURL: "https://bookify-2f1bf-default-rtdb.firebaseio.com",
   projectId: `${projectId}`,
   storageBucket: `${storageBucket}`,
   messagingSenderId: `${messagingSenderId}`,

@@ -12,7 +12,7 @@ const Offer = () => {
                   <div className="offer__item__image">
                     <img
                       className="img-fluid"
-                      src="assets/images/book1.jpg"
+                      src="https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg"
                       alt="Siege-Basini (Hardcover)"
                     />
                   </div>
@@ -23,7 +23,7 @@ const Offer = () => {
                     <h3>Innovation in Education (Hardcover)</h3>
                     <p className="price">
                       Starting at: <span>$65.09</span>
-                    </p>
+                    </p>  
                   </div>
                 </div>
               </div>
@@ -36,7 +36,7 @@ const Offer = () => {
                   <div className="offer__item__image">
                     <img
                       className="img-fluid"
-                      src="assets/images/book2.jpg"
+                      src="https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg"
                       alt="Siege-Basini (Hardcover)"
                     />
                   </div>

@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import './App.css';
 import BookshelfModern from "./component/pages/bookshelf-modern";
 import AddBook from "./component/pages/add-book";
 import Login from "./component/pages/login";

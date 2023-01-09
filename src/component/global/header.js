@@ -144,6 +144,9 @@ const Header = ({ headers }) => {
                   <Link to="/all-books">
                     <li>All Books</li>
                   </Link>
+                  <Link to="/login">
+                    <li>Login</li>
+                  </Link>
                   <li>{signOutMessage}</li>
                   {admin && (
                     <>

@@ -9,6 +9,7 @@ import BookshelfMinimal from "./component/pages/bookshelf-minimal";
 import BookshelfClassic from "./component/pages/bookshelf-classic";
 import AllBooks from "./component/pages/all-books";
 import { useEffect } from "react";
+import { useAllContext } from "./component/context/context";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -20,6 +21,7 @@ function ScrollToTop() {
 }
 
 function App() {
+    const { admin } = useAllContext();
   return (
     <>
       <BrowserRouter>
@@ -29,11 +31,13 @@ function App() {
           <Route path="/bookshelf-minimal" element={<BookshelfMinimal />} />
           <Route path="/bookshelf-classic" element={<BookshelfClassic />} />
           <Route path="/bookshelf-modern" element={<BookshelfModern />} />
-          <Route path="/add-book" element={<AddBook />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/manage" element={<ManageBooks />} />
           <Route path="/update/:id" element={<Update />} />
           <Route path="/all-books" element={<AllBooks />} />
+          {admin && (
+                    <>
+          <Route path="/add-book" element={<AddBook />} />
+          <Route path="/manage" element={<ManageBooks />} /></>)}
         </Routes>
       </BrowserRouter>
     </>

@@ -12,7 +12,7 @@ const Offer = () => {
                   <div className="offer__item__image">
                     <img
                       className="img-fluid"
-                      src="https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg"
+                      src="https://cdn.shopify.com/s/files/1/0681/8689/8738/files/91352_2_2000x.webp?v=1671902988"
                       alt="Siege-Basini (Hardcover)"
                     />
                   </div>
@@ -36,7 +36,7 @@ const Offer = () => {
                   <div className="offer__item__image">
                     <img
                       className="img-fluid"
-                      src="https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg"
+                      src="https://cdn.shopify.com/s/files/1/0681/8689/8738/files/91352_2_2000x.webp?v=1671902988"
                       alt="Siege-Basini (Hardcover)"
                     />
                   </div>

@@ -70,7 +70,7 @@ const Subscribe = () => {
               <div className="col-md-5 mb-4 mb-md-0 subscribe__wrapper--images">
                 <div
                   className="subscribe__image"
-                  style={{ backgroundImage: "url(assets/images/cover-1.jpg)" }}
+                  style={{ backgroundImage: "url(https://cdn.shopify.com/s/files/1/0681/8689/8738/files/91352_2_2000x.webp?v=1671902988)" }}
                 ></div>
               </div>
               <div className="col-md-7">

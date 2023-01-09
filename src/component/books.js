@@ -31,8 +31,8 @@ const Books = () => {
         <div className="row">
           <div className="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
             <div className="section-title-center text-center">
-              <span>Books Gallery</span>
-              <h2 className="display-6">Popular Books</h2>
+              <span>Product Gallery</span>
+              <h2 className="display-6">Popular Product</h2>
               <div className="section-divider divider-triangle"></div>
             </div>
           </div>
@@ -149,6 +149,8 @@ const Books = () => {
                       </div>
                     </div>
                   </div>
+      <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">
+      </div> 
                 </div>
               ))
           )}
@@ -164,6 +166,7 @@ const Books = () => {
         </div>
       </div>
     </div>
+     
   );
 };
 

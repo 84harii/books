@@ -3,7 +3,7 @@ import Books from "../books";
 import Footer from "../global/footer";
 import Header from "../global/header";
 import Hero from "../hero";
-import Offer from "../offer";
+// import Offer from "../offer";
 import Subscribe from "../subscribe";
 
 const BookshelfMinimal = () => {
@@ -11,7 +11,7 @@ const BookshelfMinimal = () => {
     <>
       <Header headers="minimal" />
       <Hero />
-      <Offer />
+      {/* <Offer /> */}
       <Books />
       <Subscribe />
       <Footer />

@@ -263,7 +263,7 @@ html {
 	.image-7 {
 		top: 0% !important;
 		right: -8% !important;
-		!important width: 100px !important;
+	 width: 100px !important;
 		height: 124px !important;
 	}
 
@@ -578,8 +578,8 @@ img.image-19 {
 	}
 }
 @media screen and (max-width:991px) and (min-width:768px) {
-	.background-video-5.w-background-video.w-background-video-atom>video
-  ,.background-video-6.w-background-video.w-background-video-atom>video 
+	.background-video-5.w-background-video.w-background-video-atom>video ,
+  .background-video-6.w-background-video.w-background-video-atom>video {
 		width: 206px !important;
 		height: 256px !important;
 	}

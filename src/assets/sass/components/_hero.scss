@@ -23,7 +23,7 @@
     border-radius: 50%;
     position: absolute;
     z-index: 99;
-    top: 50%;
+    top: 39%;
     transform: translate(-50%, -50%);
     transition: all 0.5s;
     opacity: 0;
@@ -52,17 +52,6 @@
     display: inline-block;
     @include media-breakpoint-down(lg) {
       padding-right: 25px;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 35px;
-      z-index: 1;
-      border: 3px dotted $color-primary;
-      border-radius: 5px;
-      height: 100%;
-      width: 80%;
     }
     img {
       position: relative;

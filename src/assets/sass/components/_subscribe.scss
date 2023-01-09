@@ -1,7 +1,7 @@
 .subscribe {
   &__wrapper {
     padding: 30px 20px;
-    border-radius: 5px;
+    border-radius: 18px;
     box-shadow: 2px 0px 15px 5px $color-shadow;
     @include media-breakpoint-down(md) {
       box-shadow: none;

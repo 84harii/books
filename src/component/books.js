@@ -149,8 +149,8 @@ const Books = () => {
                       </div>
                     </div>
                   </div>
-      <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">
-      </div> 
+      {/* <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">
+      </div>  */}
                 </div>
               ))
           )}

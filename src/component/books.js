@@ -46,7 +46,7 @@ const Books = () => {
               .slice(0, visible)
               .map((book) => (
                 <div className="col-lg-3 col-md-6 mb-4" key={book.id}>
-                  <div className="books__book">
+                  <div className="books__book" data-aos="zoom-out-up">
                     {/* <img
                       className="img-fluid image_card"
                       src={book.img}  
@@ -104,7 +104,7 @@ const Books = () => {
                           </>
                         )}
                       </div>
-                      <div className="books__book__bottom--button">
+                      {/* <div className="books__book__bottom--button">
                         {cart.find((data) => data.id === book.id) ? (
                           <>
                             {cart.map((newData) =>
@@ -151,7 +151,7 @@ const Books = () => {
                             </span>
                           </button>
                         )}
-                      </div>
+                      </div> */}
                     </div>
                   </div>
       {/* <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">

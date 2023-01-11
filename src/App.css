@@ -16,8 +16,7 @@ header.header.all-book {
 .hero__images img {
   border-radius: 18px;
 }
-/* realistic shadow css */
-
+/* realistic shadow css */ 
 :root {
   --size: 150px;
   --radius: calc(var(--size) * 20 / 100);
@@ -77,7 +76,7 @@ header.header.all-book {
   border-radius: var(--radius);
   z-index: -1;
   filter: blur(24px);
-  opacity: 0.6;
+  opacity: 0.7;
   left: 50%;
   transform: translate(-50%, 10%);
 }
@@ -172,7 +171,8 @@ header.header.all-book {
   padding: 2px 8px;
   border-radius: 8px;
 }
+ 
 
-.books__book:hover {
-  margin-bottom: 35px;
+.books__book__bottom { 
+  transition: all 0.1s !important ; 
 }

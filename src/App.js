@@ -10,6 +10,8 @@ import BookshelfClassic from "./component/pages/bookshelf-classic";
 import AllBooks from "./component/pages/all-books";
 import { useEffect } from "react";
 import { useAllContext } from "./component/context/context";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -21,7 +23,10 @@ function ScrollToTop() {
 }
 
 function App() {
-    const { admin } = useAllContext();
+  const { admin } = useAllContext();
+  useEffect(() => {
+    AOS.init();
+  }, [])
   return (
     <>
       <BrowserRouter>

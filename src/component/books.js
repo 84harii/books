@@ -47,11 +47,16 @@ const Books = () => {
               .map((book) => (
                 <div className="col-lg-3 col-md-6 mb-4" key={book.id}>
                   <div className="books__book">
-                    <img
-                      className="img-fluid"
-                      src={book.img}
-                      alt={book.title}
-                    />
+                    {/* <img
+                      className="img-fluid image_card"
+                      src={book.img}  
+                      alt={book.title} 
+                    /> */}
+                    <div
+                      className="img-fluid image_card"
+                      style={{ backgroundImage: `url(${book.img})`}}
+                    ></div>
+
                     {book.offer === "0" ? (
                       ""
                     ) : (

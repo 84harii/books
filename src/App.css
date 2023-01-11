@@ -46,7 +46,118 @@ header.header.all-book {
   transform: translate(-50%, 10%);
 }
 
-.subscribe__image
- {
-    border-radius: 18px;
- }
+.subscribe__image {
+  border-radius: 18px;
+}
+
+/* ///////////////////////////// Animation and buttton effect */
+
+/* date 22-12-22 time : 4.41pm edited by hari */
+
+:root {
+  --size: 400px;
+}
+
+.image_card {
+  width: var(--size);
+  height: 200px !important;
+  border-radius: 18px;
+  position: relative;
+  background-size: cover;
+  /* margin: calc(var(--size) * 20 / 100); */
+}
+
+.image_card:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  background-size: cover;
+  border-radius: var(--radius);
+  z-index: -1;
+  filter: blur(24px);
+  opacity: 0.6;
+  left: 50%;
+  transform: translate(-50%, 10%);
+}
+
+/* gradient underglow button  */
+
+.gradient_underglow_btn {
+  background: white;
+  padding: 15px 25px !important;
+  font-size: 11px !important;
+  position: relative;
+  border-radius: 48px !important;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.01);
+  cursor: pointer;
+  border: none;
+}
+.gradient_underglow_btn::after {
+  position: absolute;
+  content: "";
+  top: 15px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.9) translateZ(0);
+  filter: blur(25px);
+  background: linear-gradient(
+    to left,
+    #002222,
+    #024b40,
+    #2b7755,
+    #62a462,
+    #a6cf69,
+    #62a462,
+    #2b7755,
+    #024b40,
+    #002222
+  );
+  background-size: 200% 200%;
+  -webkit-animation: animateGlow 5.25s linear infinite;
+  animation: animateGlow 5.25s linear infinite;
+}
+
+@-webkit-keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+@keyframes animateGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
+  }
+}
+
+.books__book__discount { 
+  background: rgba(255, 255, 255, 0) !important;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+/******************************* Reset Default CSS ******************************* */
+
+.books__book {
+  box-shadow: none !important;
+  background-color: #ffffff00 !important;
+}
+
+.books__book__bottom {
+  background-color: #ffffff00 !important;
+}
+.books__book__bottom--button {
+  background-color: #ffffff00 !important;
+}

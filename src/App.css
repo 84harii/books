@@ -176,3 +176,6 @@ header.header.all-book {
 .books__book__bottom { 
   transition: all 0.1s !important ; 
 }
+div#books {
+  overflow: hidden;
+}

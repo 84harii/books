@@ -45,8 +45,8 @@ const Books = () => {
               .filter((book) => book.title.toLowerCase().includes(query))
               .slice(0, visible)
               .map((book) => (
-                <div className="col-lg-3 col-md-6 mb-4" key={book.id}>
-                  <div className="books__book" data-aos="zoom-out-up">
+                <div className="col-lg-3 col-md-6 mb-4" key={book.id} data-aos="zoom-out-up">
+                  <div className="books__book">
                     {/* <img
                       className="img-fluid image_card"
                       src={book.img}  

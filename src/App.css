@@ -179,3 +179,14 @@ header.header.all-book {
 div#books {
   overflow: hidden;
 }
+.modal-dialog { 
+  margin: 0 !important; 
+}
+.add-cart-btn
+{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap: 10px;
+}
+ 

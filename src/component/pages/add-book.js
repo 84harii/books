@@ -193,8 +193,16 @@ const AddBook = () => {
                     id="language"
                     type="text"
                     placeholder="Language"
-                  />
-                  {errors.language && <p>Language is required</p>}
+                    />
+                    {errors.language && <p>Language is required</p>}
+                  <label htmlFor="color">color</label>
+                  <input
+                    {...register("color", { required: true })}
+                    id="color"
+                    type="text"
+                    placeholder="color"
+                    />
+                    {errors.color && <p>Color is required</p>}
                   <label htmlFor="price">Price</label>
                   <input
                     {...register("price", { required: true })}

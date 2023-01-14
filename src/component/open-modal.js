@@ -9,12 +9,17 @@ import {
 } from "react-icons/ai";
 import { MdZoomOutMap } from "react-icons/md";
 import { useAllContext } from "./context/context";
-
+import logo from "../component/global/RD-Luxurious-logo_1.svg";
+import { IoMdArrowBack } from "react-icons/io";
+import { CgShoppingBag } from "react-icons/cg";
 const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  // const color = {
+  //   background: `${book.color}`
+  // };
   const { cart } = useAllContext();
 
   return (
@@ -32,16 +37,22 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
       >
         <div className="modal__wrapper">
           <div className="modal__wrapper--top">
-            <h3>{book.title}</h3>
             <span className="close" onClick={handleClose}>
-              <AiOutlineClose />
+              <IoMdArrowBack />
             </span>
+            <img src={logo} alt="RD" width={46} />
+            <span style={{ color: "#00000000" }}>........</span>
           </div>
           <div className="row modal__wrapper__bottom">
             <div className="col-lg-6 mb-4 mb-lg-0">
+              {/* <div
+                className="img-fluid image_card"
+                style={{ backgroundImage: `url(${book.img})` }}
+              ></div> */}
               <img className="img-fluid" src={book.img} alt={book.title} />
             </div>
             <div className="col-lg-6">
+              <h3>{book.title}</h3>
               <p className="description">{book.desc}</p>
               <ul>
                 <li>
@@ -61,10 +72,13 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                   </li>
                 )}
                 <li>
-                  <span>Price</span>: ${book.price}
+                  <span>Price</span>: {book.price}
                 </li>
                 <li>
-                  <span>Offer Price</span>: ${book.offerPrice}
+                  <span>Color</span>: {book.color}
+                </li>
+                <li>
+                  <span>Offer Price</span>: {book.offerPrice}
                 </li>
                 <li>
                   <span>Publisher</span>: {book.publisher}
@@ -112,9 +126,9 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                   onClick={() => addToCart(book)}
                   className="button button__primary w-100 mt-3"
                 >
-                  <span>
-                    <AiOutlineShoppingCart />
-                    Add to cart
+                  <span className="add-cart-btn">
+                    <CgShoppingBag />
+                    <span> Add to cart</span>
                   </span>
                 </button>
               )}

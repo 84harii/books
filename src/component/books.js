@@ -155,7 +155,7 @@ const Books = () => {
                           <>
                           
                             <del>₹{book.price}</del>{" "}
-                            <span>₹<CountUp end={book.offerPrice} useEasing={true} enableScrollSpy={true} scrollSpyDelay={100} scrollSpyOnce={true}/></span>
+                            <span>₹<CountUp end={book.offerPrice} useEasing={true} enableScrollSpy={true} scrollSpyDelay={1000} scrollSpyOnce={true}/></span>
                           </>
                         )}
                       </div>

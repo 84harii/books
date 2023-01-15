@@ -56,6 +56,36 @@ header.header.all-book {
 /* ///////////////////////////// Animation and buttton effect */
 
 /* date 22-12-22 time : 4.41pm edited by hari */
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Regular.otf?v=1670581520");
+  font-weight: 500;
+}
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Extralight.otf?v=1670581520");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Light.otf?v=1670581520");
+  font-variant: lighter;
+}
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Medium.otf?v=1670581520");
+  font-weight: 600;
+}
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Bold.otf?v=1670581520");
+  font-weight: 700;
+}
+@font-face {
+  font-family: "display";
+  src: url("https://cdn.shopify.com/s/files/1/0681/8689/8738/files/ClashDisplay-Semibold.otf?v=1670581520");
+  font-weight: 800;
+}
 
 :root {
   --size: 400px;

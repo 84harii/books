@@ -60,9 +60,9 @@ const Books = () => {
         <Confetti
           width={width}
           height={height}
-          numberOfPieces={400}
-          recycle={false}
-          className="confetti"
+          numberOfPieces={840}
+          recycle={false} 
+          duration={10000}
         />
         <div className="row">
           <div className="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
@@ -140,8 +140,8 @@ const Books = () => {
                           </>
                         ) : (
                           <>
-                            <del>${book.price}</del>{" "}
-                            <span>${book.offerPrice}</span>
+                            <del>₹{book.price}</del>{" "}
+                            <span>₹{book.offerPrice}</span>
                           </>
                         )}
                       </div>

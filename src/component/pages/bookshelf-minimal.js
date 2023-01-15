@@ -13,7 +13,7 @@ const BookshelfMinimal = () => {
       <Hero />
       {/* <Offer /> */}
       <Books />
-      <Subscribe />
+      {/* <Subscribe /> */}
       <Footer />
     </>
   );

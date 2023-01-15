@@ -30,12 +30,12 @@ const Cart = ({ cartDrawer, confirmBook }) => {
                 Price:{" "}
                 {parseInt(cartItem.price) === cartItem?.offerPrice ? (
                   <>
-                    <span>${cartItem.price}</span>
+                    <span>₹{cartItem.price}</span>
                   </>
                 ) : (
                   <>
-                  <del>${cartItem.price}</del>{" "}
-                    <span>${cartItem.offerPrice}</span>
+                  <del>₹{cartItem.price}</del>{" "}
+                    <span>₹{cartItem.offerPrice}</span>
                   </>
                 )}
                 <div className="calculation">
@@ -54,7 +54,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
                       <AiOutlinePlus />
                     </button>
                   </div>
-                  <span className="calculation__price">${cartItem.total}</span>
+                  <span className="calculation__price">₹{cartItem.total}</span>
                 </div>
               </div>
             </div>
@@ -64,7 +64,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
       <div className="cart__confirm">
         <div className="cart__confirm__price">
           <span>Subtotal:</span>
-          <strong>${price}</strong>
+          <strong>₹{price}</strong>
         </div>
         <button className="button button__primary" onClick={confirmBook}>
           <span>Confirm</span>

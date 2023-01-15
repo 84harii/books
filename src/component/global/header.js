@@ -104,7 +104,7 @@ const Header = ({ headers }) => {
                 </span>
                 <input
                   type="text"
-                  placeholder="Search your book here"
+                  placeholder="Search Something ?"
                   onClick={(e) => executeScroll()}
                   onChange={(e) => setQuery(e.target.value)}
                 />

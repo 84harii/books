@@ -250,13 +250,7 @@ div#books {
   .section-padding {
     padding: 15px 0 !important;
   }
-  .books__book__bottom
-  {
-    text-align: center;
-  }
-  .books__book__bottom .price {
-     justify-content: center;
-}
+
 
 }
 .footer {

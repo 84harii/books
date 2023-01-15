@@ -228,6 +228,29 @@ div#books {
   z-index: 9999;
 }
 
+[class*="section-title-"] span { 
+  color: #bbbcbc !important; 
+}
+
 /* In pursuit of the finest. */
 
 /* Fashionable, indulgent, extravagant, memorable Luxurious, premium, posh, Sophisticated, elegant, prestigious, quality. */
+
+
+
+
+
+/* =========================== media query for mobile ============================================ */
+/* =========================== media query for mobile ============================================ */
+/* =========================== media query for mobile ============================================ */
+/* =========================== media query for mobile ============================================ */
+
+@media screen and (max-width:768px) {
+  
+  .section-padding {
+    padding: 15px 0 !important;
+  }
+}
+.footer {
+  background-color: #002222 !important;
+}

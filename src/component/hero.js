@@ -9,12 +9,12 @@ import {
   MdOutlineKeyboardArrowLeft,
   MdOutlineNavigateNext,
 } from "react-icons/md";
-import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
     <div className="hero section-padding-t section-bg pt-0">
-      <img src="https://i.postimg.cc/TYX3pPQK/golden-leaf.png" className="leaf_one" alt="background_decorative_image"/>
+    
+      {/* <img src="https://i.postimg.cc/TYX3pPQK/golden-leaf.png" className="leaf_one" alt="background_decorative_image"/> */}
       <div className="container">
         <div className="row testi-row">
           <div className="col-12">

@@ -12,9 +12,32 @@
     <link rel="apple-touch-icon" href="https://cdn.shopify.com/s/files/1/0681/8689/8738/files/RD-Luxurious-logo-_1_x320.png?v=1672156830" />
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <title>RD - Live better, Live Luxury</title>
+    <style>
+      .svgLoader {
+        animation: spin 0.5s linear infinite;
+        margin: auto;
+      }
+      .divLoader {
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    
+    <div id="root">
+      <div class="divLoader">
+        <img src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg" width="84" alt="RD">
+      </div>
+    </div>
   </body> 
 </html>

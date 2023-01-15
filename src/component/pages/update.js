@@ -77,7 +77,7 @@ const Update = () => {
         icon: "success",
         text: "Book updated successfully",
       });
-      navigate("/manage-book");
+      navigate("/manage");
     }, 100);
     return () => clearTimeout(timer);
   };

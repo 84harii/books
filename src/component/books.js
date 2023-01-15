@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   AiOutlineDelete,
   AiOutlineMinus,
@@ -8,9 +8,38 @@ import {
 import { useAllContext } from "./context/context";
 import LoadingSpinner from "./loading-spinner";
 import OpenModal from "./open-modal";
+import Confetti from "react-confetti";
+
+
+
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height
+  };
+}
+
+function useWindowDimensions() {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  return windowDimensions;
+}
 
 const Books = () => {
   const [visible, setVisible] = useState(8);
+  const { height, width } = useWindowDimensions();
   const showMoreBooks = () => {
     setVisible((pervValue) => pervValue + 4);
   };
@@ -28,6 +57,13 @@ const Books = () => {
   return (
     <div id="books" className="books section-padding section-bg" ref={myRef}>
       <div className="container">
+        <Confetti
+          width={width}
+          height={height}
+          numberOfPieces={400}
+          recycle={false}
+          className="confetti"
+        />
         <div className="row">
           <div className="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
             <div className="section-title-center text-center">
@@ -45,7 +81,11 @@ const Books = () => {
               .filter((book) => book.title.toLowerCase().includes(query))
               .slice(0, visible)
               .map((book) => (
-                <div className="col-lg-3 col-md-6 mb-4" key={book.id} data-aos="zoom-out-up">
+                <div
+                  className="col-lg-3 col-md-6 mb-4"
+                  key={book.id}
+                  data-aos="zoom-out-up"
+                >
                   <div className="books__book">
                     {/* <img
                       className="img-fluid image_card"
@@ -54,7 +94,7 @@ const Books = () => {
                     /> */}
                     <div
                       className="img-fluid image_card"
-                      style={{ backgroundImage: `url(${book.img})`}}
+                      style={{ backgroundImage: `url(${book.img})` }}
                     ></div>
 
                     {book.offer === "0" ? (
@@ -93,7 +133,8 @@ const Books = () => {
                         By: <span>{book.author}</span>
                       </p>
                       <div className="price">
-                        Price: {parseInt(book.price) === book.offerPrice ? (
+                        Price:{" "}
+                        {parseInt(book.price) === book.offerPrice ? (
                           <>
                             <span>${book.price}</span>
                           </>
@@ -154,7 +195,7 @@ const Books = () => {
                       </div> */}
                     </div>
                   </div>
-      {/* <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">
+                  {/* <div class="image-card" style="background-image: url('https://i.postimg.cc/k5jK4hvp/empty-dark-room-modern-futuristic-sci-fi-background-3d-illustration.jpg')">
       </div>  */}
                 </div>
               ))
@@ -171,7 +212,6 @@ const Books = () => {
         </div>
       </div>
     </div>
-     
   );
 };
 

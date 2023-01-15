@@ -12,11 +12,11 @@ import { auth } from "../../firebase";
 import Cart from "../cart";
 import Confirm from "../confirm";
 import { useAllContext } from "../context/context";
-import siteLogo from "../global/RD-Luxurious-logo_1.svg"
-
+import siteLogo from "../global/RD-Luxurious-logo_1.svg";
 
 const Header = ({ headers }) => {
-  const { executeScroll, cart, setCart, price, setQuery, admin } = useAllContext();
+  const { executeScroll, cart, setCart, price, setQuery, admin } =
+    useAllContext();
   const [fix, setFix] = useState(false);
   const [search, setSearch] = useState(false);
   const [signOutMessage, setSignOutMessage] = useState("");
@@ -95,7 +95,7 @@ const Header = ({ headers }) => {
             </button>
             <Link to="/" className="header__logo">
               {/* <h1 className="m-0">BOOKSHELF.</h1> */}
-              <img src={siteLogo} alt="RD" width={46}  />
+              <img src={siteLogo} alt="RD" width={46} />
             </Link>
             <div className="header__search">
               <form>
@@ -126,21 +126,14 @@ const Header = ({ headers }) => {
             >
               <div className="header-menu">
                 <div className="header-menu__top">
-                <img src={siteLogo} alt="RD" width={46} />
+                  <img src={siteLogo} alt="RD" width={46} />
                   <span onClick={headerDrawer}>
                     <MdOutlineClose />
                   </span>
                 </div>
                 <ul className="bs-scroll">
-                  <Link to="/bookshelf-minimal">
-                    <li>Bookshelf Minimal</li>
-                  </Link>
-                  <Link to="/bookshelf-modern">
-                    <li>Bookshelf Modern</li>
-                  </Link>
-                  <Link to="/bookshelf-classic">
-                    <li>Bookshelf Classic</li>
-                  </Link>
+                  
+
                   <Link to="/all-books">
                     <li>All Books</li>
                   </Link>
@@ -149,11 +142,19 @@ const Header = ({ headers }) => {
                   </Link>
                   <li>{signOutMessage}</li>
                   {admin && (
-                    <>
+                    <><Link to="/bookshelf-minimal">
+                    <li>Bookshelf Minimal</li>
+                  </Link>
+                      <Link to="/bookshelf-modern">
+                        <li>Bookshelf Modern</li>
+                      </Link>
+                      <Link to="/bookshelf-classic">
+                        <li>Bookshelf Classic</li>
+                      </Link>
                       <Link to="/add-book">
                         <li>Add book</li>
                       </Link>
-                      <Link to="/manage-book">
+                      <Link to="/manage">
                         <li>Manage book</li>
                       </Link>
                       <li>

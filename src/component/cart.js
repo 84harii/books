@@ -1,6 +1,9 @@
+import React, { useEffect, useState } from "react";
+import CountUp, { useCountUp } from 'react-countup';
 import { AiOutlineDelete, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { useAllContext } from "./context/context";
+import Marquee from "react-fast-marquee";
 
 const Cart = ({ cartDrawer, confirmBook }) => {
   const { cart, handleChange, price, handleRemove } = useAllContext();
@@ -13,7 +16,18 @@ const Cart = ({ cartDrawer, confirmBook }) => {
             <MdOutlineClose />
           </div>
           <h2 className="fs-5">Your cart items</h2>
-          <div className="section-divider divider-triangle"></div>
+          <Marquee pauseOnHover={true} speed={46} gradientWidth={46}>
+            <span>
+              Thank you for Shopping with us{" "}
+              <img
+                src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg"
+                width={20}
+                style={{ opacity: "0.84", marginTop: "-5px" }}
+              />
+            </span>
+            &nbsp;&nbsp;
+          </Marquee>
+          {/* <div className="section-divider divider-triangle"></div> */}
         </div>
       </div>
       <div className="cart__books bs-scroll">
@@ -34,7 +48,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
                   </>
                 ) : (
                   <>
-                  <del>₹{cartItem.price}</del>{" "}
+                    <del>₹{cartItem.price}</del>{" "}
                     <span>₹{cartItem.offerPrice}</span>
                   </>
                 )}
@@ -64,7 +78,16 @@ const Cart = ({ cartDrawer, confirmBook }) => {
       <div className="cart__confirm">
         <div className="cart__confirm__price">
           <span>Subtotal:</span>
-          <strong>₹{price}</strong>
+          <strong> 
+            ₹
+            <CountUp
+              end={price}
+              useEasing={true}
+              enableScrollSpy={true}
+              scrollSpyDelay={40000}
+              // scrollSpyOnce={true}
+            />
+          </strong>
         </div>
         <button className="button button__primary" onClick={confirmBook}>
           <span>Confirm</span>

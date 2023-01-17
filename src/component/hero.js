@@ -11,10 +11,10 @@ const Hero = () => {
       <div className="container">
         <div className="row testi-row">
           <div className="col-12 ps-0 pe-0">
-            <Carousel slideSize="70%" height={200} slideGap="sm" controlSize={20}
-                  withIndicators   
-                  align="center"
+            <Carousel slideSize="70%" height={200} slideGap="md"
+                  align="center"  
                   slidesToScroll={1}
+                  loop  withControls={false}
             >
               <Carousel.Slide>
                 <div className="row align-items-center">

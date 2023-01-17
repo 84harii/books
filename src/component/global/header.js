@@ -73,7 +73,7 @@ const Header = ({ headers }) => {
 
   const baseClass = `${fix ? "header navbar_fixed" : "header"} ${
     headers === "all-book" ? "all-book" : ""
-  } ${headers === "minimal" ? "minimal" : ""} ${
+  } ${headers === "minimal" ? "minimal nav-bg" : ""} ${
     headers === "modern" ? "modern" : ""
   } ${headers === "classic" ? "classic" : ""} ${
     headers === "manage-book" ? "manage-book" : ""
@@ -85,7 +85,7 @@ const Header = ({ headers }) => {
     <header className={baseClass}>
       <div className="container">
         <div className="row">
-          <Navbar className="p-0">
+      <Navbar className="p-0">
             <button className="header__menu-btn" onClick={headerDrawer}>
               <span className="header__menu-btn__icon">
                 <span className="bar"></span>
@@ -132,8 +132,6 @@ const Header = ({ headers }) => {
                   </span>
                 </div>
                 <ul className="bs-scroll">
-                  
-
                   <Link to="/all-books">
                     <li>All Books</li>
                   </Link>
@@ -142,9 +140,10 @@ const Header = ({ headers }) => {
                   </Link>
                   <li>{signOutMessage}</li>
                   {admin && (
-                    <><Link to="/bookshelf-minimal">
-                    <li>Bookshelf Minimal</li>
-                  </Link>
+                    <>
+                      <Link to="/bookshelf-minimal">
+                        <li>Bookshelf Minimal</li>
+                      </Link>
                       <Link to="/bookshelf-modern">
                         <li>Bookshelf Modern</li>
                       </Link>

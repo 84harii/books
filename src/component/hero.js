@@ -16,14 +16,7 @@ const Hero = () => {
     
       {/* <img src="https://i.postimg.cc/TYX3pPQK/golden-leaf.png" className="leaf_one" alt="background_decorative_image"/> */}
       <div className="container">
-        <div className="row testi-row">
-<<<<<<< HEAD
-          <div className="col-12 ps-0 pe-0">
-            <Carousel slideSize="70%" height={200} slideGap="md"
-                  align="center"  
-                  slidesToScroll={1}
-                  loop  withControls={false}
-=======
+        <div className="row testi-row"> 
           <div className="col-12">
             <Swiper
               modules={[Navigation, Pagination, Autoplay]}
@@ -34,8 +27,7 @@ const Hero = () => {
                 prevEl: ".prev",
                 nextEl: ".next",
               }}
-              className="hero__swiper pb-5"
->>>>>>> parent of d654786 (add mantine ui)
+              className="hero__swiper pb-5" 
             >
               <SwiperSlide>
                 <div className="row align-items-center">

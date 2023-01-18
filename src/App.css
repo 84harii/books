@@ -258,7 +258,20 @@ div#books {
   .section-padding {
     padding: 15px 0 !important;
   }
-
+  .slider_img 
+  {
+    height: 220px !important;
+    width: 100% !important;
+    margin: auto;
+    object-fit: cover;
+    padding: 12px;
+    border-radius: 30px;
+  }
+  
+  .swiper-fade .swiper-slide { 
+    display: flex;
+    justify-content: center;
+  }
 
 }
 .footer {
@@ -266,4 +279,8 @@ div#books {
 }
 .marquee-container span {
   font-weight: 400 !important;
+} 
+
+.header__search form input { 
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
 }

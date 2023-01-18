@@ -3,7 +3,6 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-<<<<<<< HEAD
     "@emotion/react": "^11.10.5",
     "@mantine/carousel": "^5.10.1",
     "@mantine/core": "^5.10.0",
@@ -17,8 +16,6 @@
     "@mantine/prism": "^5.10.0",
     "@mantine/spotlight": "^5.10.0",
     "@mantine/tiptap": "^5.10.0",
-=======
->>>>>>> parent of d654786 (add mantine ui)
     "@reonomy/react-confetti-explosion": "^1.0.32",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",

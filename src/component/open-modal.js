@@ -16,10 +16,11 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
   // const color = {
-    //   background: `${book.color}`
-    // };
-    const { cart } = useAllContext();
+  //   background: `${book.color}`
+  // };
+  const { cart } = useAllContext();
 
   return (
     <>

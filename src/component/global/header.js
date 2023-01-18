@@ -104,7 +104,7 @@ const Header = ({ headers }) => {
                 </span>
                 <input
                   type="text"
-                  placeholder="Search Something ?"
+                  placeholder="Search for Something ?"
                   onClick={(e) => executeScroll()}
                   onChange={(e) => setQuery(e.target.value)}
                 />
@@ -163,7 +163,7 @@ const Header = ({ headers }) => {
                         >
                           <span>Logout</span>
                         </button>
-                      </li>
+                      </li> 
                     </>
                   )}
                 </ul>

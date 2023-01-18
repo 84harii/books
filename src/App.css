@@ -260,7 +260,7 @@ div#books {
   }
   .slider_img 
   {
-    height: 220px !important;
+    height: 184px !important;
     width: 100% !important;
     margin: auto;
     object-fit: cover;
@@ -283,4 +283,16 @@ div#books {
 
 .header__search form input { 
   box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.books__book .functional-icons li .icon {
+  background-color: #fff !important;
+  color: #002222 !important ;
+}
+
+.header.navbar_fixed { 
+  box-shadow: none !important;
+  background: #ffffff7a !important;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(20px) !important;
+  -webkit-backdrop-filter: blur(20px) !important;
 }

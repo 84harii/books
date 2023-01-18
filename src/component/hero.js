@@ -30,16 +30,19 @@ const Hero = () => {
               }}
             >
               <SwiperSlide>
-                <img  src="https://images.pexels.com/photos/15021623/pexels-photo-15021623.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="slider_img"/>
+                <img  src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.pexels.com/photos/599619/pexels-photo-599619.jpeg?auto=compress&cs=tinysrgb&w=1600" className="slider_img"/>
+                <img  src="https://images.unsplash.com/photo-1535242208474-9a2793260ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.pexels.com/photos/11403744/pexels-photo-11403744.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" className="slider_img"/>
+                <img  src="https://images.unsplash.com/photo-1566405382187-a5937a822773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80  " className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.pexels.com/photos/3067112/pexels-photo-3067112.jpeg?auto=compress&cs=tinysrgb&w=1600" className="slider_img"/>
+                <img  src="https://images.unsplash.com/photo-1601258166723-ebbde89682a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" className="slider_img"/>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img  src="https://images.unsplash.com/photo-1598978503025-4296960f75e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=717&q=80" className="slider_img"/>
               </SwiperSlide>
             </Swiper>
           </div>

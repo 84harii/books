@@ -71,7 +71,7 @@ const Books = () => {
     <img src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg" width={52} />
             </div>
 
-            <div className="section-title-center text-center">
+            <div className="section-title-center text-center">  
               <h2 className="display-6" style={{ fontFamily: "display" , fontWeight: "600 " }}>
                 Popular Product
               </h2>

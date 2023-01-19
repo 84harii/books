@@ -89,7 +89,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
             />
           </strong>
         </div>
-        <button className="button button__primary" onClick={confirmBook}>
+        <button className="buttons" onClick={confirmBook}>
           <span>Confirm</span>
         </button>
       </div>

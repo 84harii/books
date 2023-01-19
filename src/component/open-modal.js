@@ -12,6 +12,8 @@ import { useAllContext } from "./context/context";
 import logo from "../component/global/RD-Luxurious-logo_1.svg";
 import { IoMdArrowBack } from "react-icons/io";
 import { CgShoppingBag } from "react-icons/cg";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -21,9 +23,14 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   //   background: `${book.color}`
   // };
   const { cart } = useAllContext();
+  const showToastMessage = () => {
+    toast.success(`${book.title} added to cart`, {
+        position: toast.POSITION.TOP_RIGHT
+    });
+};
 
-  return (
-    <>
+  return ( 
+    <> 
       <div className="icon" onClick={handleShow}>
         <MdZoomOutMap />
       </div>
@@ -126,13 +133,16 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                   onClick={() => addToCart(book)}
                   className="button button__primary w-100 mt-3"
                 >
-                  <span className="add-cart-btn">
+                  <span className="add-cart-btn" onClick={showToastMessage}>
                     <CgShoppingBag />
                     <span> Add to cart</span>
                   </span>
                 </button>
+                
               )}
-            </div>
+            </div> 
+            
+            <ToastContainer icon={false} position="top-center"autoClose={2500}/>
           </div>
         </div>
       </Modal>

@@ -103,6 +103,7 @@ header.header.all-book {
   border-radius: 18px;
   position: relative;
   background-size: cover;
+  background-position: center center;
   /* margin: calc(var(--size) * 20 / 100); */
 }
 
@@ -295,4 +296,70 @@ div#books {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1) !important;
   backdrop-filter: blur(20px) !important;
   -webkit-backdrop-filter: blur(20px) !important;
+}
+
+.Toastify__progress-bar--success {
+  background: #194745 !important;
+}
+.Toastify__toast-icon svg 
+{
+  fill: #194745;
+}
+
+.modal-content { border-radius: 0 !important;}
+
+.buttons {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  z-index: 1;
+}
+
+.buttons::after,
+.buttons::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.buttons::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #002222;
+  border-radius: 10px;
+}
+
+.buttons::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.buttons:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.buttons:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.buttons:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
 }

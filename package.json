@@ -20,7 +20,6 @@
     "aos": "^3.0.0-beta.6",
     "bootstrap": "^5.2.2",
     "firebase": "^9.13.0",
-    "locomotive-scroll": "^4.1.4",
     "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.6.0",
@@ -38,6 +37,8 @@
     "react-paginate": "^8.1.4",
     "react-router-dom": "^6.4.3",
     "react-scripts": "5.0.1",
+    "react-toastify": "^9.1.1",
+    "react-watching-you": "^0.0.11",
     "sweetalert2": "^11.6.13",
     "swiper": "^8.4.4",
     "web-vitals": "^2.1.4"

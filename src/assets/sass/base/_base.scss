@@ -159,10 +159,11 @@ background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/s
     height: 100%;
   }
   &__primary {
-    border-radius: 3px;
+    border-radius: 12px;
     overflow: hidden;
     color: $color-light;
     background-color: $color-dark;
+    
     &::before {
       content: "";
       background: $color-primary;

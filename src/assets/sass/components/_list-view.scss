@@ -52,7 +52,8 @@
         text-overflow: clip;
         text-shadow: none;
         transform: rotateY(1deg) rotateZ(-45deg);
-        background-color: $color-primary;
+          background-color: transparent;
+          // background-color: $color-primary;
         z-index: -1;
       }
     }

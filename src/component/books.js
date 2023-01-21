@@ -10,7 +10,7 @@ import LoadingSpinner from "./loading-spinner";
 import OpenModal from "./open-modal";
 import Confetti from "react-confetti";
 import Marquee from "react-fast-marquee";
-import CountUp, { useCountUp } from 'react-countup';
+import CountUp, { useCountUp } from "react-countup";
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -60,19 +60,39 @@ const Books = () => {
         <Confetti
           width={width - 5}
           height={height}
-          numberOfPieces={width}
+          numberOfPieces={1000}
           recycle={false}
-          colors={["#002222", "#024b40", "#2b7755", "#62a462", "#a6cf69"]}
+          colors={[
+            "#002222",
+            "#024b40",
+            "#2b7755",
+            "#62a462",
+            "#a6cf69",
+            "#A6CF69",
+            "#6EBF70",
+            "#2DAC7A",
+            "#009882",
+            "#008386",
+            "#006D84",
+            "#155300", 
+            "#68EDCB",
+          ]}
         />
 
         <div className="row">
           <div className="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
             <div className="text-center mb-2">
-    <img src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg" width={52} />
+              <img
+                src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg"
+                width={52}
+              />
             </div>
 
-            <div className="section-title-center text-center">  
-              <h2 className="display-6" style={{ fontFamily: "display" , fontWeight: "600 " }}>
+            <div className="section-title-center text-center">
+              <h2
+                className="display-6"
+                style={{ fontFamily: "display", fontWeight: "600 " }}
+              >
                 Popular Product
               </h2>
               <Marquee pauseOnHover={true} speed={46} gradientWidth={46}>
@@ -153,9 +173,17 @@ const Books = () => {
                           </>
                         ) : (
                           <>
-                          
                             <del>₹{book.price}</del>{" "}
-                            <span>₹<CountUp end={book.offerPrice} useEasing={true} enableScrollSpy={true} scrollSpyDelay={1000} scrollSpyOnce={true}/></span>
+                            <span>
+                              ₹
+                              <CountUp
+                                end={book.offerPrice}
+                                useEasing={true}
+                                enableScrollSpy={true}
+                                scrollSpyDelay={1000}
+                                scrollSpyOnce={true}
+                              />
+                            </span>
                           </>
                         )}
                       </div>

@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import React, { useEffect } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useAllContext } from "./context/context";
 
@@ -6,6 +7,41 @@ const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
 
 const Confirm = ({ backToCart, setConfirm }) => {
   const { cart, setCart, price } = useAllContext();
+
+  const options = {
+    key: "rzp_test_ZU2MvRBNX66yDs",
+    amount: price * 100, //  = INR 1
+    name: "RD Labels",
+    description: "some description",
+    image: "https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg",
+    handler: function(response) {
+      alert(response.razorpay_payment_id);
+    },
+    prefill: {
+      name: "Harii",
+      contact: "9316464111",
+      email: "demo@demo.com"
+    },
+    notes: {
+      address: "Gopipura surat"
+    },
+    theme: {
+      color: "#002222",
+      hide_topbar: false
+    }
+  };
+  
+  const openPayModal = options => {
+    var rzp1 = new window.Razorpay(options);
+    rzp1.open();
+  };
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src = "https://checkout.razorpay.com/v1/checkout.js";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
+
   const {
     register,
     handleSubmit,
@@ -96,8 +132,11 @@ const Confirm = ({ backToCart, setConfirm }) => {
             {errors.homeAddress && <p>Apartment address is required</p>}
           </div>
           <div className="cart__confirm">
+            <button className="button button__primary" onClick={() => openPayModal(options)}>
+              <span>Pay <span className="price_final">₹{price}</span> with <span className="price_final">Razorpay</span></span>
+            </button> 
             <button type="submit" className="button button__primary">
-              <span>Confirm Order</span>
+              <span>Order on Whatsapp</span>
             </button>
           </div>
         </div>

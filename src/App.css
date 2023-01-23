@@ -374,6 +374,31 @@ h2
 	-webkit-text-fill-color: transparent;
 }
 
+.cart__confirm {
+  padding-top: 10px;
+}
+.price_final
+{
+  font-weight: 600;
+}
+
+.cart__confirm__price strong {
+  background-color: #f0f7e6;
+  padding: 4px 8px;
+  font-size: 22px;
+  color: #002222;
+  border-radius: 11.5px;
+}
+
+span.text-center.alert.alert-success.mt-3 {
+  font-size: 14px;
+}
+
+
+
+.alert-success { 
+  --bs-alert-bg: #f0f7e6 !important ; 
+}
 /* 
             #002222,
             #024b40,

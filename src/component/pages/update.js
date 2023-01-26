@@ -113,6 +113,58 @@ const Update = () => {
                       ""
                     )}
                   </div>
+                      {/* <label htmlFor="title">Book Image 1</label> */}
+                      <input
+                        id="title"
+                        type="text"
+                        placeholder="Book Image 1"
+                        defaultValue={updateData?.image1}
+                        onChange={(e) =>
+                          setData({
+                            ...data,
+                            image1: e.target.value,
+                          })
+                        }
+                      /> 
+                      {/* <label htmlFor="title">Book Image 1</label> */}
+                      <input
+                        id="title"
+                        type="text"
+                        placeholder="Book Image 2"
+                        defaultValue={updateData?.image2}
+                        onChange={(e) =>
+                          setData({
+                            ...data,
+                            image2: e.target.value,
+                          })
+                        }
+                      /> 
+                      {/* <label htmlFor="title">Book Image 1</label> */}
+                      <input
+                        id="title"
+                        type="text"
+                        placeholder="Book Image 2"
+                        defaultValue={updateData?.image3}
+                        onChange={(e) =>
+                          setData({
+                            ...data,
+                            image3: e.target.value,
+                          })
+                        }
+                      /> 
+                      {/* <label htmlFor="title">Book Image 1</label> */}
+                      <input
+                        id="title"
+                        type="text"
+                        placeholder="Book Image 4"
+                        defaultValue={updateData?.image4}
+                        onChange={(e) =>
+                          setData({
+                            ...data,
+                            image4: e.target.value,
+                          })
+                        }
+                      /> 
                   <label htmlFor="title">Book Title</label>
                   <input
                     id="title"

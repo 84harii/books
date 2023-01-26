@@ -100,11 +100,50 @@ const AddBook = () => {
                       />
                     </label>
                     {perc !== null ? (
-                      <ProgressBar now={Math.round(perc)} label={`${Math.round(perc)}%`} />
+                      <ProgressBar
+                        now={Math.round(perc)}
+                        label={`${Math.round(perc)}%`}
+                      />
                     ) : (
                       ""
                     )}
                   </div>
+                  {/* /////////////////////////////////////////// */}
+                  <div className="multiple_image">
+                    {/* <label htmlFor="image1">Book Image 1</label> */}
+                    <input
+                      {...register("image1", { required: false })}
+                      id="image1"
+                      type="text"
+                      placeholder="Book Image 1"
+                    />
+                    {errors.title && <p>Title is required</p>}
+                    {/* <label htmlFor="image2">Book Image 2</label> */}
+                    <input
+                      {...register("image2", { required: false })}
+                      id="image2"
+                      type="text"
+                      placeholder="Book Image 2"
+                    />
+                    {errors.title && <p>Title is required</p>}
+                    {/* <label htmlFor="title">Book Image 3</label> */}
+                    <input
+                      {...register("image3", { required: false })}
+                      id="image3"
+                      type="text"
+                      placeholder="Book Image 3"
+                    />
+                    {errors.title && <p>Title is required</p>}
+                    {/* <label htmlFor="image4">Book Image 4</label> */}
+                    <input
+                      {...register("image4", { required: false })}
+                      id="image4"
+                      type="text"
+                      placeholder="Book Image 4"
+                    />
+                    {errors.title && <p>Title is required</p>}
+                  </div>
+                  {/* /////////////////////////////////////////// */}
                   <label htmlFor="title">Book Title</label>
                   <input
                     {...register("title", { required: true })}
@@ -193,16 +232,16 @@ const AddBook = () => {
                     id="language"
                     type="text"
                     placeholder="Language"
-                    />
-                    {errors.language && <p>Language is required</p>}
+                  />
+                  {errors.language && <p>Language is required</p>}
                   <label htmlFor="color">color</label>
                   <input
                     {...register("color", { required: true })}
                     id="color"
                     type="text"
                     placeholder="color"
-                    />
-                    {errors.color && <p>Color is required</p>}
+                  />
+                  {errors.color && <p>Color is required</p>}
                   <label htmlFor="price">Price</label>
                   <input
                     {...register("price", { required: true })}

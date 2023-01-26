@@ -14,6 +14,17 @@ import { IoMdArrowBack } from "react-icons/io";
 import { CgShoppingBag } from "react-icons/cg";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+// import required modules
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
+
 const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -56,7 +67,35 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                 className="img-fluid image_card"
                 style={{ backgroundImage: `url(${book.img})` }}
               ></div> */}
+                 <Swiper
+              spaceBetween={30}
+              effect={"fade"}
+              navigation={false} 
+              className="mySwiper"
+              modules={[EffectFade,Autoplay, Pagination, Navigation]}
+              loop={true}
+              loopFillGroupWithBlank={true}  
+              autoplay={{
+                delay: 1500,
+                disableOnInteraction: false,
+              }}
+            >
+              <SwiperSlide>
               <img className="img-fluid" src={book.img} alt={book.title} />
+              </SwiperSlide>
+              <SwiperSlide>
+              <img className="img-fluid" src={book.image1} alt={book.title} />
+              </SwiperSlide>
+              <SwiperSlide>
+              <img className="img-fluid" src={book.image2} alt={book.title} />
+              </SwiperSlide>
+              <SwiperSlide>
+              <img className="img-fluid" src={book.image3} alt={book.title} />
+              </SwiperSlide>
+              <SwiperSlide>
+              <img className="img-fluid" src={book.image4} alt={book.title} />
+              </SwiperSlide>
+            </Swiper> 
             </div>
             <div className="col-lg-6">
               <h3>{book.title}</h3>

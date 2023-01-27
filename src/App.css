@@ -484,3 +484,7 @@ span.text-center.alert.alert-success.mt-3 {
             #006D84,
             #155300, 
             #68EDCB, */
+
+            .modal__wrapper--top { 
+    overflow: hidden;
+}

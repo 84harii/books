@@ -24,7 +24,8 @@ import "swiper/css/effect-creative";
 // import required modules
 import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
-import parse from 'html-react-parser';
+import parse from "html-react-parser";
+
 const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -39,7 +40,7 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
       position: toast.POSITION.TOP_RIGHT,
     });
   };
-
+ 
   return (
     <>
       <div className="icon" onClick={handleShow}>
@@ -59,7 +60,10 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
               <IoMdArrowBack />
             </span>
             <img src={logo} alt="RD" width={46} />
-            <img src="https://i.postimg.cc/PxC0xmYh/pattern-17.png" className="rotate_animation"/>
+            <img
+              src="https://i.postimg.cc/PxC0xmYh/pattern-17.png"
+              className="rotate_animation"
+            />
             <span style={{ color: "#00000000" }}>........</span>
           </div>
           <div className="row modal__wrapper__bottom">
@@ -83,7 +87,7 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                     rotate: [-180, 0, 0],
                   },
                 }}
-                modules={[EffectCreative,Autoplay, Pagination, Navigation]}
+                modules={[EffectCreative, Autoplay, Pagination, Navigation]}
                 className="mySwiper4"
                 loop={true}
                 loopFillGroupWithBlank={true}
@@ -91,7 +95,6 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
                   delay: 500,
                   disableOnInteraction: true,
                 }}
-                
               >
                 {/* <Swiper
               spaceBetween={30}
@@ -107,32 +110,36 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
               }}
             > */}
                 <SwiperSlide>
-                  <img className="img-fluid img"  src={book.img} alt={book.title} />
+                  <img
+                    className="img-fluid img"
+                    src={book.img}
+                    alt={book.title}
+                  />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
-                    className="img-fluid img" 
+                    className="img-fluid img"
                     src={book.image1}
                     alt={book.title}
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
-                    className="img-fluid img" 
+                    className="img-fluid img"
                     src={book.image2}
                     alt={book.title}
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
-                    className="img-fluid img" 
+                    className="img-fluid img"
                     src={book.image3}
                     alt={book.title}
                   />
                 </SwiperSlide>
                 <SwiperSlide>
                   <img
-                    className="img-fluid img" 
+                    className="img-fluid img"
                     src={book.image4}
                     alt={book.title}
                   />
@@ -141,7 +148,7 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
             </div>
             <div className="col-lg-6">
               <h3>{book.title}</h3>
-              <div className="description">{parse(book.desc)}</div> 
+              <div className="description">{parse(book.desc)}</div>
               <ul>
                 <li>
                   <span>Category</span>: {book.category}

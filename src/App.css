@@ -491,3 +491,6 @@ span.text-center.alert.alert-success.mt-3 {
 .ql-container.ql-snow {
   min-height: 65vh;
 }
+.ql-editor.ql-blank {
+  min-height: 100vh;
+}

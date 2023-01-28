@@ -24,7 +24,7 @@ import "swiper/css/effect-creative";
 // import required modules
 import { Autoplay, EffectCreative, Navigation, Pagination } from "swiper";
 import { HiOutlineEmojiHappy } from "react-icons/hi";
- 
+import parse from 'html-react-parser';
 const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -141,7 +141,7 @@ const OpenModal = ({ book, handleRemove, handleChange, addToCart }) => {
             </div>
             <div className="col-lg-6">
               <h3>{book.title}</h3>
-              <p className="description">{book.desc}</p>
+              <div className="description">{parse(book.desc)}</div> 
               <ul>
                 <li>
                   <span>Category</span>: {book.category}

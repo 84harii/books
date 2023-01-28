@@ -8,14 +8,16 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import Footer from "../global/footer";
 import { ProgressBar } from "react-bootstrap";
-
+import ReactQuill from "react-quill"; 
+import Modal from "react-bootstrap/Modal";
+import { CopyButton, ActionIcon, Tooltip, Button } from '@mantine/core';
+import { IconCopy, IconCheck } from '@tabler/icons';
 const AddBook = () => {
   const navigate = useNavigate();
   const [file, setFile] = useState("");
   const [image, setImage] = useState({});
   const [perc, setPerc] = useState(null);
   console.log(perc);
-
   useEffect(() => {
     const uploadFile = (e) => {
       const storageRef = ref(storage, file.name);
@@ -72,6 +74,52 @@ const AddBook = () => {
     }
     e.target.reset();
   };
+  // ///rich text
+  const modules = {
+    toolbar: [
+      [{ header: [1, 2, 3, 4, 5, 6, false] }],
+      ["bold", "italic", "underline", "strike", "blockquote"],
+      [{ size: [] }],
+      [{ font: [] }],
+      [{ align: ["right", "center", "justify"] }],
+      [{ list: "ordered" }, { list: "bullet" }],
+      ["link", "image"],
+      [{ color: ["white", "#fff"] }],
+      [{ background: ["#e6fcf5", "#002222"] }],
+    ],
+  };
+
+  const formats = [
+    "header",
+    "bold",
+    "italic",
+    "underline",
+    "strike",
+    "blockquote",
+    "list",
+    "bullet",
+    "link",
+    "color",
+    "image",
+    "background",
+    "align",
+    "size",
+    "font",
+  ];
+
+  const [code, setCode] = useState("");
+  const handleProcedureContentChange = (content, delta, source, editor) => {
+    setCode(content);
+    //let has_attribues = delta.ops[1].attributes || "";
+    //console.log(has_attribues);
+    //const cursorPosition = e.quill.getSelection().index;
+    // this.quill.insertText(cursorPosition, "★");
+    //this.quill.setSelection(cursorPosition + 1);
+  };
+  const [show, setShow] = useState(false);
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   return (
     <>
       <Header headers="add-book" />
@@ -160,9 +208,62 @@ const AddBook = () => {
                     placeholder="Book Subtitle"
                   />
                   {errors.subtitle && <p>Subtitle is required</p>}
-                  <label htmlFor="desc">Book Description</label>
+                  {/* ------------------------------------------------------- */}
+
+                  <Modal show={show} onHide={handleClose} centered>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Description</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>
+                      {console.log(code)}
+                      <ReactQuill
+                        theme="snow"
+                        modules={modules}
+                        formats={formats}
+                        value={code}
+                        onChange={handleProcedureContentChange}
+                      />
+                      <div className="d-flex justify-content-end"> 
+                     
+                        <CopyButton value={code} timeout={3000}>
+                          {({ copied, copy }) => (
+                            <Tooltip
+                              label={copied ? "Copied" : "Copy"}
+                              withArrow
+                              position="right"
+                            >
+                              <ActionIcon
+                                color={copied ? "violet" : "teal"}
+                                onClick={copy}
+                              >
+                                {copied ? (
+                                  <IconCheck size={16} />
+                                ) : (
+                                  <IconCopy size={16} />
+                                )}
+                              </ActionIcon>
+                            </Tooltip>
+                          )}
+                        </CopyButton> 
+                      </div>
+                    </Modal.Body>
+                  </Modal>
+                  {/* ------------------------------------------------------- */}
+                  <label htmlFor="desc">
+                    Description{" "}
+                    <Button
+                      variant="light"
+                      color="violet"
+                      radius="xl"
+                      size="xs"
+                      uppercase
+                      onClick={handleShow}
+                    >
+                      Open Editor
+                    </Button>
+                  </label>
                   <textarea
-                    {...register("desc", { required: true })}
+                    {...register("desc", { required: false })}
                     id="desc"
                     rows="4"
                     type="text"

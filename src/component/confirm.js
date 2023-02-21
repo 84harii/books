@@ -19,11 +19,11 @@ const Confirm = ({ backToCart, setConfirm }) => {
     },
     prefill: {
       name: "Harii",
-      contact: "9316464111",
-      email: "demo@demo.com"
+      contact: "9316464100",
+      email: "harshrana0084@gmail.com"
     },
     notes: {
-      address: "Gopipura surat"
+      address: "Gopipura Main Road, surat"
     },
     theme: {
       color: "#002222",
@@ -132,7 +132,7 @@ const Confirm = ({ backToCart, setConfirm }) => {
             {errors.homeAddress && <p>Apartment address is required</p>}
           </div>
           <div className="cart__confirm">
-            <button className="button button__primary" onClick={() => openPayModal(options)}>
+            <button className="button button__primary" disabled onClick={() => openPayModal(options)}>
               <span>Pay <span className="price_final">₹{price}</span> with <span className="price_final">Razorpay</span></span>
             </button> 
             <button type="submit" className="button button__primary">

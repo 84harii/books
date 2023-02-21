@@ -8,7 +8,7 @@ const Footer = () => {
     return new Date().getFullYear();
   };
   return (
-    <div className="footer section-padding-t">
+    <div className="footer section-padding-t bottom">
       <div className="container">
         <div className="row">
           <div className="col-md-6">
@@ -29,7 +29,7 @@ const Footer = () => {
               </div>
               <div className="footer__top--info">
                 <h3>Need Help?</h3>
-                <p>Please call us at <a href="tel:9316464111">9316464111</a></p>
+                <p>Please call us at <a href="tel:9316464100">9316464100</a></p>
               </div>
             </div>
           </div>
@@ -38,8 +38,8 @@ const Footer = () => {
         <div className="footer__bottom">
           <h3><a href="/">RD</a></h3>
           <p>
-            © {getYear()} All right reserved. Made by <AiFillHeart /> {" "}
-            <a href="https://themeforest.net/user/themeatelier">Harii</a>
+            © {getYear()} All right reserved. Made with <AiFillHeart /> by{" "}
+            <a href="https://www.instagram.com/harii.84/">Harii</a>
           </p>
         </div>
       </div>

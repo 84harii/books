@@ -63,7 +63,7 @@ const Books = () => {
           numberOfPieces={1000}
           recycle={false}
           colors={[
-            "#002222",
+            "#111B21",
             "#024b40",
             "#2b7755",
             "#62a462",

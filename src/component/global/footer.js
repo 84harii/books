@@ -8,7 +8,7 @@ const Footer = () => {
     return new Date().getFullYear();
   };
   return (
-    <div className="footer section-padding-t bottom">
+    <div className="footer section-padding-t">
       <div className="container">
         <div className="row">
           <div className="col-md-6">

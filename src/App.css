@@ -155,7 +155,7 @@ header.header.all-book {
   transform: scale(0.9) translateZ(0);
   filter: blur(30px);
   background: linear-gradient(to left,
-      #002222,
+      #111B21,
       #024b40,
       #2b7755,
       #62a462,
@@ -163,7 +163,7 @@ header.header.all-book {
       #62a462,
       #2b7755,
       #024b40,
-      #002222);
+      #111B21);
   background-size: 200% 200%;
   -webkit-animation: animateGlow 4.25s linear infinite;
   animation: animateGlow 4.25s linear infinite;
@@ -290,7 +290,7 @@ div#books {
 }
 
 .footer {
-  background-color: #002222 !important;
+  background-color: #111B21 !important;
 }
 
 .marquee-container span {
@@ -303,7 +303,7 @@ div#books {
 
 .books__book .functional-icons li .icon {
   background-color: #fff !important;
-  color: #002222 !important;
+  color: #111B21 !important;
 }
 
 .header.navbar_fixed {
@@ -351,7 +351,7 @@ div#books {
   transform: translate(0%, 0%);
   width: 100%;
   height: 100%;
-  background: #002222;
+  background: #111B21;
   border-radius: 10px;
 }
 
@@ -401,7 +401,7 @@ div#books {
   background-color: #f0f7e6;
   padding: 4px 8px;
   font-size: 22px;
-  color: #002222;
+  color: #111B21;
   border-radius: 11.5px;
 }
 
@@ -471,7 +471,7 @@ span.text-center.alert.alert-success.mt-3 {
  
 
 /* 
-            #002222,
+            #111B21,
             #024b40,
             #2b7755,
             #62a462,
@@ -505,4 +505,11 @@ span.text-center.alert.alert-success.mt-3 {
 .bottom {
   clip-path: polygon(0 0,100% 50px,100% 100%,0 100%);
   margin-top: -40px;
+}
+.curved {
+  position: relative;
+  background: #2c3e50;
+  height: 50vh;
+  border-bottom-left-radius: 50% 20%;
+  border-bottom-right-radius: 50% 20%;
 }

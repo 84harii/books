@@ -97,7 +97,7 @@ const Update = () => {
       [{ list: "ordered" }, { list: "bullet" }],
       ["link", "image"],
       [{ color: ["white", "#fff"] }],
-      [{ background: ["#e6fcf5", "#002222"] }],
+      [{ background: ["#e6fcf5", "#111B21"] }],
     ],
   };
 

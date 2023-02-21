@@ -26,7 +26,7 @@ const Confirm = ({ backToCart, setConfirm }) => {
       address: "Gopipura Main Road, surat"
     },
     theme: {
-      color: "#002222",
+      color: "#111B21",
       hide_topbar: false
     }
   };

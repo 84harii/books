@@ -10,7 +10,7 @@ import LoadingSpinner from "./loading-spinner";
 import OpenModal from "./open-modal";
 import Confetti from "react-confetti";
 import Marquee from "react-fast-marquee";
-import CountUp, { useCountUp } from "react-countup";
+import CountUp, { useCountUp } from "react-countup"; 
 
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
@@ -82,7 +82,7 @@ const Books = () => {
           <div className="col-xl-6 offset-xl-3 col-lg-10 offset-lg-1">
             <div className="text-center mb-2">
               <img
-                src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg"
+                src="https://i.postimg.cc/KjFnRqnt/RD-Luxurious-logo-1.png"
                 width={52}
               />
             </div>

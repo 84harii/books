@@ -513,3 +513,7 @@ span.text-center.alert.alert-success.mt-3 {
   border-bottom-left-radius: 50% 20%;
   border-bottom-right-radius: 50% 20%;
 }
+
+.price span {
+  box-shadow: rgb(0 0 0 / 10%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
+}

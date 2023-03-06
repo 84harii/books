@@ -13,7 +13,7 @@ const Confirm = ({ backToCart, setConfirm }) => {
     amount: price * 100, //  = INR 1
     name: "RD Labels",
     description: "some description",
-    image: "https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg",
+    image: "../../RD-Luxurious-logo_1.svg",
     handler: function(response) {
       alert(response.razorpay_payment_id);
     },

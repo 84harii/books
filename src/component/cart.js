@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CountUp, { useCountUp } from 'react-countup';
+import CountUp, { useCountUp } from "react-countup";
 import { AiOutlineDelete, AiOutlineMinus, AiOutlinePlus } from "react-icons/ai";
 import { MdOutlineClose } from "react-icons/md";
 import { useAllContext } from "./context/context";
@@ -20,7 +20,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
             <span>
               Thank you for Shopping with us{" "}
               <img
-                src="https://rd-label.vercel.app/static/media/RD-Luxurious-logo_1.210dc48211329c8be1480ca1d0a35b72.svg"
+                src="https://i.postimg.cc/KjFnRqnt/RD-Luxurious-logo-1.png"
                 width={20}
                 style={{ opacity: "0.84", marginTop: "-5px" }}
               />
@@ -78,7 +78,7 @@ const Cart = ({ cartDrawer, confirmBook }) => {
       <div className="cart__confirm">
         <div className="cart__confirm__price">
           <span>Subtotal:</span>
-          <strong> 
+          <strong>
             ₹
             <CountUp
               end={price}

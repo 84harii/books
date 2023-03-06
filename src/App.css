@@ -517,3 +517,7 @@ span.text-center.alert.alert-success.mt-3 {
 .price span {
   box-shadow: rgb(0 0 0 / 10%) 0px 10px 36px 0px, rgb(0 0 0 / 6%) 0px 0px 0px 1px;
 }
+.modal__wrapper__bottom h3 {
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+  padding: 10px;
+}

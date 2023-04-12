@@ -21,6 +21,7 @@
     "bootstrap": "^5.2.2",
     "firebase": "^9.13.0",
     "html-react-parser": "^3.0.8",
+    "morse-code-converter": "^1.0.2",
     "node-sass": "^8.0.0",
     "react-bootstrap": "^2.6.0",
     "react-confetti": "^6.1.0",

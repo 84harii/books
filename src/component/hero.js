@@ -30,19 +30,19 @@ const Hero = () => {
               }}
             >
               <SwiperSlide>
-                <img  src="https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" className="slider_img"/>
+                <img  src="https://source.unsplash.com/1600x900/?shopping" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.unsplash.com/photo-1535242208474-9a2793260ca8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80" className="slider_img"/>
+                <img  src="https://source.unsplash.com/1600x900/?ecommerce" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.unsplash.com/photo-1566405382187-a5937a822773?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=688&q=80  " className="slider_img"/>
+                <img  src="https://source.unsplash.com/1600x900/?sale" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.unsplash.com/photo-1601258166723-ebbde89682a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=715&q=80" className="slider_img"/>
+                <img  src="https://source.unsplash.com/1600x900/?discount" className="slider_img"/>
               </SwiperSlide>
               <SwiperSlide>
-                <img  src="https://images.unsplash.com/photo-1598978503025-4296960f75e5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=717&q=80" className="slider_img"/>
+                <img  src="https://source.unsplash.com/1600x900/?product" className="slider_img"/>
               </SwiperSlide>
             </Swiper>
           </div>

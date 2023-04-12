@@ -1,6 +1,24 @@
 import React, { useEffect, useState, useRef, useContext, createContext } from 'react';
 import { collection, onSnapshot } from "firebase/firestore";
 import { auth, db } from '../../firebase';
+const morse = require("morse-code-converter");
+const code = morse.textToMorse('Harii is here');
+console.log(code);
+console.log(`
+────────────────────────────────────────────────────────────────────────
+─██████──██████─██████████████─████████████████───██████████─██████████─
+─██░░██──██░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██───██░░░░░░██─██░░░░░░██─
+─██░░██──██░░██─██░░██████░░██─██░░████████░░██───████░░████─████░░████─
+─██░░██──██░░██─██░░██──██░░██─██░░██────██░░██─────██░░██─────██░░██───
+─██░░██████░░██─██░░██████░░██─██░░████████░░██─────██░░██─────██░░██───
+─██░░░░░░░░░░██─██░░░░░░░░░░██─██░░░░░░░░░░░░██─────██░░██─────██░░██───
+─██░░██████░░██─██░░██████░░██─██░░██████░░████─────██░░██─────██░░██───
+─██░░██──██░░██─██░░██──██░░██─██░░██──██░░██───────██░░██─────██░░██───
+─██░░██──██░░██─██░░██──██░░██─██░░██──██░░██████─████░░████─████░░████─
+─██░░██──██░░██─██░░██──██░░██─██░░██──██░░░░░░██─██░░░░░░██─██░░░░░░██─
+─██████──██████─██████──██████─██████──██████████─██████████─██████████─
+────────────────────────────────────────────────────────────────────────`);
+
 
 const Context = createContext();
 
@@ -19,11 +37,14 @@ export const ContextProvider = ({ children }) => {
     const [allBooks, setAllBooks] = useState([]);
     const [query, setQuery] = useState("");
   
+   
+
     const addToCart = (item) => {
       item.amount = 1;
       item.total = parseInt(item.offerPrice);
       if (cart.find((data) => data.id === item.id)) return;
       setCart([...cart, item]);
+ 
     };
   
     const handleChange = (item, d) => {
@@ -45,6 +66,8 @@ export const ContextProvider = ({ children }) => {
       let ans = 0;
       cart.map((item) => (ans += item.amount * parseInt(item.offerPrice)));
       setPrice(ans);
+
+
     };
   
     useEffect(() => {

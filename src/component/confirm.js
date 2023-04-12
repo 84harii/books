@@ -3,6 +3,7 @@ import React, { useEffect } from "react";
 import { HiArrowNarrowLeft } from "react-icons/hi";
 import { useAllContext } from "./context/context";
 
+
 const whatsappNumber = process.env.REACT_APP_WHATSAPP_NUMBER;
 
 const Confirm = ({ backToCart, setConfirm }) => {
@@ -14,24 +15,24 @@ const Confirm = ({ backToCart, setConfirm }) => {
     name: "RD Labels",
     description: "some description",
     image: "../../RD-Luxurious-logo_1.svg",
-    handler: function(response) {
+    handler: function (response) {
       alert(response.razorpay_payment_id);
     },
     prefill: {
       name: "Harii",
       contact: "9316464100",
-      email: "harshrana0084@gmail.com"
+      email: "harshrana0084@gmail.com",
     },
     notes: {
-      address: "Gopipura Main Road, surat"
+      address: "Gopipura Main Road, surat",
     },
     theme: {
       color: "#111B21",
-      hide_topbar: false
-    }
+      hide_topbar: false,
+    },
   };
-  
-  const openPayModal = options => {
+
+  const openPayModal = (options) => {
     var rzp1 = new window.Razorpay(options);
     rzp1.open();
   };
@@ -49,10 +50,12 @@ const Confirm = ({ backToCart, setConfirm }) => {
   } = useForm();
   const onSubmit = (customerData, e) => {
     window.open(
-      `https://wa.me/${whatsappNumber}?text=Hello%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0A-----ORDER%20DETAILS-----%0A${cart.map(
-        (data) =>
-          `-%20${data.title}%20-%20${data.amount}%20copies.%20Price%3A%20%24${data.total}%0A`
-      )}%0ATOTAL%20AMOUNT%20-%20%24${price}%0A%0A-----CUSTOMER%20INFO-----%0AName%3A%20${
+      `https://wa.me/${whatsappNumber}?text=
+       Hello%2C%20I%20would%20like%20to%20place%20an%20order.%0A%0A———–●ORDER%20DETAILS●———–%0A${cart.map( 
+         (data) =>
+           `-%20${data.title}%20-%20${data.amount}%20copies.%20Price%3A%20%24${data.total}%0A`
+           
+       )}%0ATOTAL%20AMOUNT%20-%20%24${price}%0A%0A———–●CUSTOMER%20INFO●———–%0AName%3A%20${
         customerData.name
       }%0ANumber%3A%20${customerData.number}%0AEmail%3A%20${
         customerData.email
@@ -62,6 +65,7 @@ const Confirm = ({ backToCart, setConfirm }) => {
         customerData.homeAddress
       }%0A%0A-------------------%0AWe%20will%20confirm%20your%20order%20upon%20receiving%20the%20message.`
     );
+    
     e.target.reset();
     setCart([]);
     setConfirm(false);
@@ -132,11 +136,18 @@ const Confirm = ({ backToCart, setConfirm }) => {
             {errors.homeAddress && <p>Apartment address is required</p>}
           </div>
           <div className="cart__confirm">
-            <button className="button button__primary" disabled onClick={() => openPayModal(options)}>
-              <span>Pay <span className="price_final">₹{price}</span> with <span className="price_final">Razorpay</span></span>
-            </button> 
             <button type="submit" className="button button__primary">
               <span>Order on Whatsapp</span>
+            </button>
+            <button
+              className="button button__primary"
+              disabled
+              onClick={() => openPayModal(options)}
+            >
+              <span>
+                Pay <span className="price_final">₹{price}</span> with{" "}
+                <span className="price_final">Razorpay <br/> coming soon</span>
+              </span>
             </button>
           </div>
         </div>

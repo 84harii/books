@@ -139,7 +139,15 @@ const Confirm = ({ backToCart, setConfirm }) => {
             <button type="submit" className="button button__primary">
               <span>Order on Whatsapp</span>
             </button>
-            <button
+           
+          </div>
+        </div>
+        <span className="text-center alert alert-success mt-3" role="alert">
+          [Note: Your order will be confirmed via Whatsapp. You'll be redirect
+          to whatsapp after clicking 'Confirm Order' button.]
+        </span>
+      </form>
+      <button
               className="button button__primary"
               onClick={() => openPayModal(options)}
             >
@@ -148,13 +156,6 @@ const Confirm = ({ backToCart, setConfirm }) => {
                 <span className="price_final">Razorpay</span>
               </span>
             </button>
-          </div>
-        </div>
-        <span className="text-center alert alert-success mt-3" role="alert">
-          [Note: Your order will be confirmed via Whatsapp. You'll be redirect
-          to whatsapp after clicking 'Confirm Order' button.]
-        </span>
-      </form>
     </div>
   );
 };

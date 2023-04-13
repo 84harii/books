@@ -141,12 +141,11 @@ const Confirm = ({ backToCart, setConfirm }) => {
             </button>
             <button
               className="button button__primary"
-              disabled
               onClick={() => openPayModal(options)}
             >
               <span>
                 Pay <span className="price_final">₹{price}</span> with{" "}
-                <span className="price_final">Razorpay <br/> coming soon</span>
+                <span className="price_final">Razorpay</span>
               </span>
             </button>
           </div>
